@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      SIGHTLINE_URL: ${{ secrets.SIGHTLINE_URL }}
+      SIGHTLINE_URL: ${{ vars.SIGHTLINE_URL }}
       SIGHTLINE_TOKEN: ${{ secrets.SIGHTLINE_TOKEN }}
       SIGHTLINE_PROJECT: ${{ secrets.SIGHTLINE_PROJECT }}
       SITE_URL: ${{ needs.deploy.outputs.page_url }}
