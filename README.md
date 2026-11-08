@@ -18,3 +18,10 @@ python3 -m http.server 4321
 
 On purpose, the site has some live content: a ticking conversation counter and a "Synced x min ago" label.
 Sightline should learn to ignore these, so they shouldn't show up as changes.
+
+## CI
+
+`.github/workflows/sightline.yml` runs on every push to `main`. It deploys the site to GitHub Pages, then asks Sightline to screenshot the deployed pages and compare them with the approved baseline.
+The check fails when there are visual changes to review, and the job summary links to the Sightline review page.
+
+It needs three repository secrets: `SIGHTLINE_URL`, `SIGHTLINE_TOKEN` (a Sightline API token from Settings → API tokens) and `SIGHTLINE_PROJECT` (the project id, `p_…`).
