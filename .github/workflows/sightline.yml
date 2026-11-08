@@ -1,6 +1,6 @@
-# Deploy the site to GitHub Pages, then run a Sightline visual check against the deployed version.
-# The check fails when Sightline finds visual changes that need review; approve them in Sightline to accept.
-name: Deploy + Sightline
+# Deploy the site to GitHub Pages, then run a Deja View visual check against the deployed version.
+# The check fails when Deja View finds visual changes that need review; approve them in Deja View to accept.
+name: Deploy + Deja View
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
   sightline:
-    name: Sightline visual check
+    name: Deja View visual check
     needs: deploy
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -45,7 +45,7 @@ jobs:
       SITE_URL: ${{ needs.deploy.outputs.page_url }}
       COMMIT_MSG: ${{ github.event.head_commit.message || 'manual run' }}
     steps:
-      - name: Run Sightline build
+      - name: Run Deja View build
         run: |
           set -euo pipefail
           api() { curl -sS --fail-with-body -H "Authorization: Bearer $SIGHTLINE_TOKEN" -H "Content-Type: application/json" "$@"; }
@@ -56,7 +56,7 @@ jobs:
           LABEL="${GITHUB_SHA::7} · ${COMMIT_MSG%%$'\n'*}"
           BODY=$(jq -n --arg u "${SITE_URL%/}" --arg l "$LABEL" '{base_url: $u, label: $l}')
           RUN=$(api -X POST "$SIGHTLINE_URL/api/projects/$SIGHTLINE_PROJECT/runs" -d "$BODY" | jq -r .id)
-          echo "Sightline build $RUN started for $SITE_URL"
+          echo "Deja View build $RUN started for $SITE_URL"
 
           for i in $(seq 1 200); do
             S=$(api "$SIGHTLINE_URL/api/runs/$RUN/status")
@@ -74,7 +74,7 @@ jobs:
           PIXELS=$(echo "$C" | jq -r '.pixel_regions // 0')
 
           {
-            echo "## Sightline visual check"
+            echo "## Deja View visual check"
             echo
             case "$RESULT" in
               passed|approved) echo "✅ **No visual changes** across $SNAPS snapshots." ;;
@@ -86,12 +86,12 @@ jobs:
             echo "|---|---|---|---|"
             echo "| $SNAPS | $GROUPS | $NOISE | $PIXELS |"
             echo
-            echo "[Review in Sightline →]($URL)"
+            echo "[Review in Deja View →]($URL)"
           } >> "$GITHUB_STEP_SUMMARY"
 
           echo "Result: $RESULT · review: $URL"
           case "$RESULT" in
             passed|approved) exit 0 ;;
-            changes) echo "::error title=Sightline::$GROUPS visual change group(s) need review: $URL"; exit 1 ;;
-            *) echo "::error title=Sightline::Build $RESULT: $URL"; exit 1 ;;
+            changes) echo "::error title=Deja View::$GROUPS visual change group(s) need review: $URL"; exit 1 ;;
+            *) echo "::error title=Deja View::Build $RESULT: $URL"; exit 1 ;;
           esac
