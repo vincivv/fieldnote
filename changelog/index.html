@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog — Fieldnote</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="../"><img class="logo-mark" src="../assets/mark-light.svg" alt="">fieldnote</a>
+    <nav class="nav-links">
+      <a href="../">Product</a>
+      <a href="../customers/">Customers</a>
+      <a href="../pricing/">Pricing</a>
+      <a href="../changelog/" aria-current="page">Changelog</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="signin" href="#">Sign in</a>
+      <a class="btn btn-ghost-dark btn-sm" href="#">Book a demo</a>
+      <a class="btn btn-cream btn-sm" href="../pricing/">Start free</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu">
+    <a href="../">Product</a><a href="../customers/">Customers</a><a href="../pricing/">Pricing</a><a href="../changelog/">Changelog</a>
+    <a class="btn btn-cream" href="../pricing/">Start free</a>
+  </div>
+</header>
+
+<section class="page-head stripes">
+  <div class="wrap">
+    <p class="mono" style="color:var(--on-dark-muted);margin-bottom:24px">Changelog</p>
+    <h1>What's new<br><span class="dim">in Fieldnote.</span></h1>
+    <p>New features, improvements and fixes, shipped every week.</p>
+    <form class="subscribe" onsubmit="return false">
+      <input type="email" placeholder="you@company.com" aria-label="Email">
+      <button class="btn btn-cream" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:48px">
+  <div class="wrap log">
+    <article class="entry">
+      <div class="when">NOV 4, 2026<br><span class="ver">v3.8</span></div>
+      <div>
+        <span class="pill new">NEW</span>
+        <h2 style="margin-top:14px">Churn-risk alerts in Slack</h2>
+        <p>Fieldnote now watches the tone of every account's conversations and pings the owner in Slack when it shifts, with the three quotes that triggered it.</p>
+        <div class="shot">
+          <div style="display:flex;gap:12px;align-items:flex-start;font-size:14px">
+            <span style="width:34px;height:34px;border-radius:8px;background:var(--ink);flex:none"></span>
+            <div><b>Fieldnote</b> <span style="color:var(--faint);font-size:12px">9:02 AM</span><br>
+              <b>Verdant</b> looks at risk ($84k ARR). 3 tickets about SSO this week and the champion missed the QBR.
+              <div class="quote-card">"If SSO isn't on the roadmap we'll have to revisit the contract."<cite>VERDANT · TICKET #5102</cite></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="entry">
+      <div class="when">OCT 28, 2026<br><span class="ver">v3.7</span></div>
+      <div>
+        <span class="pill new">NEW</span><span class="pill imp">IMPROVED</span>
+        <h2 style="margin-top:14px">Revenue weighting for every theme</h2>
+        <p>Connect Salesforce or HubSpot and themes are ranked by the ARR of the accounts asking, not just the number of mentions.</p>
+        <ul>
+          <li>ARR at stake shown on every theme</li>
+          <li>Filter themes by plan, segment or region</li>
+          <li>Export any view to CSV</li>
+        </ul>
+      </div>
+    </article>
+    <article class="entry">
+      <div class="when">OCT 20, 2026<br><span class="ver">v3.6</span></div>
+      <div>
+        <span class="pill imp">IMPROVED</span>
+        <h2 style="margin-top:14px">A faster, calmer Monday brief</h2>
+        <p>The weekly brief now leads with the three changes that matter most and links every claim to its source conversation.</p>
+      </div>
+    </article>
+    <article class="entry">
+      <div class="when">OCT 9, 2026<br><span class="ver">v3.5.2</span></div>
+      <div>
+        <span class="pill fix">FIX</span>
+        <h2 style="margin-top:14px">Fixes and polish</h2>
+        <ul>
+          <li>Gong calls longer than three hours now import in full</li>
+          <li>Theme names no longer truncate on small screens</li>
+          <li>The dashboard loads 2× faster on mobile</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="logo" href="../"><img class="logo-mark" src="../assets/mark-light.svg" alt="">fieldnote</a>
+      <a class="btn btn-cream btn-sm" href="../pricing/">Start free</a>
+    </div>
+    <div class="foot-cols">
+      <div><h4>PRODUCT</h4><a href="../">Overview</a><a href="../pricing/">Pricing</a><a href="../changelog/">Changelog</a><a href="#">Security</a></div>
+      <div><h4>COMPANY</h4><a href="../customers/">Customers</a><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a></div>
+      <div><h4>LEGAL</h4><a href="#">Terms</a><a href="#">Privacy</a><a href="#">DPA</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Fieldnote Labs, Inc. A demo site for Sightline.</span><span>Made with care in San Francisco</span></div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>

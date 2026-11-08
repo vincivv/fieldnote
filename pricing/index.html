@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing — Fieldnote</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="../"><img class="logo-mark" src="../assets/mark-light.svg" alt="">fieldnote</a>
+    <nav class="nav-links">
+      <a href="../">Product</a>
+      <a href="../customers/">Customers</a>
+      <a href="../pricing/" aria-current="page">Pricing</a>
+      <a href="../changelog/">Changelog</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="signin" href="#">Sign in</a>
+      <a class="btn btn-ghost-dark btn-sm" href="#">Book a demo</a>
+      <a class="btn btn-cream btn-sm" href="#plans">Start free</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu">
+    <a href="../">Product</a><a href="../customers/">Customers</a><a href="../pricing/">Pricing</a><a href="../changelog/">Changelog</a>
+    <a class="btn btn-cream" href="#plans">Start free</a>
+  </div>
+</header>
+
+<section class="page-head stripes" style="padding-bottom:128px">
+  <div class="wrap">
+    <p class="mono" style="color:var(--on-dark-muted);margin-bottom:24px">Pricing</p>
+    <h1>Pay for the insight,<br><span class="dim">not the seats.</span></h1>
+    <p>Every plan includes unlimited viewers. You pay for the conversations Fieldnote reads each month.</p>
+    <div class="billing" role="group" aria-label="Billing period">
+      <button class="on" data-billing="monthly">Monthly</button>
+      <button data-billing="annual">Annual <span class="save">−20%</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="plans" style="padding-bottom:112px">
+  <div class="wrap">
+    <div class="plans">
+      <div class="plan">
+        <div class="pname"><h3>Starter</h3></div>
+        <p class="pdesc">For a founder or a first PM who wants to hear every customer.</p>
+        <div class="price"><span class="amt" data-monthly="$0" data-annual="$0">$0</span><span class="per">/ month</span></div>
+        <a class="btn btn-ghost" href="#">Start free</a>
+        <ul>
+          <li>500 conversations a month</li>
+          <li>2 sources</li>
+          <li>Weekly brief by email</li>
+          <li>7 days of history</li>
+        </ul>
+      </div>
+      <div class="plan featured">
+        <div class="pname"><h3>Team</h3><span class="badge">MOST POPULAR</span></div>
+        <p class="pdesc">For product and support teams who run on customer evidence.</p>
+        <div class="price"><span class="amt" data-monthly="$249" data-annual="$199">$249</span><span class="per">/ month</span></div>
+        <a class="btn btn-cream" href="#">Start 14-day trial</a>
+        <ul>
+          <li>10,000 conversations a month</li>
+          <li>Unlimited sources</li>
+          <li>Ask Fieldnote, with quotes</li>
+          <li>Churn-risk alerts in Slack</li>
+          <li>Push themes to Linear and Jira</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <div class="pname"><h3>Enterprise</h3></div>
+        <p class="pdesc">For companies with security reviews, many products and many regions.</p>
+        <div class="price"><span class="amt" style="font-size:52px">Custom</span></div>
+        <a class="btn btn-dark" href="#">Talk to sales</a>
+        <ul>
+          <li>Unlimited conversations</li>
+          <li>SSO, SCIM and audit log</li>
+          <li>EU or US data residency</li>
+          <li>Dedicated success manager</li>
+        </ul>
+      </div>
+    </div>
+
+    <table class="compare">
+      <thead><tr><th>COMPARE PLANS</th><th>STARTER</th><th>TEAM</th><th>ENTERPRISE</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">Listening</td></tr>
+        <tr><td>Conversations per month</td><td>500</td><td>10,000</td><td>Unlimited</td></tr>
+        <tr><td>Sources</td><td>2</td><td>Unlimited</td><td>Unlimited</td></tr>
+        <tr><td>History</td><td>7 days</td><td>2 years</td><td>Unlimited</td></tr>
+        <tr class="grp"><td colspan="4">Insight</td></tr>
+        <tr><td>Weekly brief</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Ask Fieldnote</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Revenue weighting</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Churn-risk alerts</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr class="grp"><td colspan="4">Security</td></tr>
+        <tr><td>SSO and SCIM</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+        <tr><td>Audit log</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+        <tr><td>Data residency</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec sec-cream">
+  <div class="wrap">
+    <h2 class="h2" style="text-align:center">Questions, answered.</h2>
+    <div class="faq">
+      <details open><summary>What counts as a conversation?</summary><p>One call, one ticket thread, one chat or one review. A 40-message ticket is still one conversation.</p></details>
+      <details><summary>Do you train models on our data?</summary><p>No. Your conversations are used only to build your workspace, and you can delete everything with one click.</p></details>
+      <details><summary>How long does setup take?</summary><p>Most teams connect their first source in under five minutes and get a first brief the same morning.</p></details>
+      <details><summary>Can we switch plans later?</summary><p>Yes, at any time. Upgrades apply right away; downgrades take effect at the end of the billing period.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="logo" href="../"><img class="logo-mark" src="../assets/mark-light.svg" alt="">fieldnote</a>
+      <a class="btn btn-cream btn-sm" href="#plans">Start free</a>
+    </div>
+    <div class="foot-cols">
+      <div><h4>PRODUCT</h4><a href="../">Overview</a><a href="../pricing/">Pricing</a><a href="../changelog/">Changelog</a><a href="#">Security</a></div>
+      <div><h4>COMPANY</h4><a href="../customers/">Customers</a><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a></div>
+      <div><h4>LEGAL</h4><a href="#">Terms</a><a href="#">Privacy</a><a href="#">DPA</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Fieldnote Labs, Inc. A demo site for Sightline.</span><span>Made with care in San Francisco</span></div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>
